@@ -14,9 +14,10 @@ const nextButton = document.querySelector('[data-js="button-next"]');
 const pagination = document.querySelector('[data-js="pagination"]');
 
 // States
-const maxPage = 42;
+let maxPage = 42;
 let page = 1;
 const searchQuery = "";
+let minPage = 1;
 
 // Task 1
 
@@ -36,22 +37,25 @@ async function fetchCharacters() {
 fetchCharacters();
 
 nextButton.addEventListener("click", () => {
-  page++;
+  if (page < maxPage) {
+    page++;
+    fetchCharacters();
+    console.log(page);
 
-  fetchCharacters();
+     let currentPage = maxPage - maxPage + page;
+  pagination.innerHTML = currentPage + "/ " + maxPage;
+  }
   console.log(page);
-  let currentPage = maxPage - maxPage + page;
-  pagination.innerHTML = currentPage + " / " + maxPage;
-
-  // for (let pagination = 1; pagination <= 42; pagination++) {
-  //   console.log(pagination);
-
-  // }
 });
 
-/* const li = createCharacterCard();
-cardContainer.append(li); */
+prevButton.addEventListener("click", () => {
+  if (page > 1) {
+    page--;
+    fetchCharacters();
+    console.log(page);
 
-/* Task 4 */
-
-// ?page=page in url mit backticks und dann funktion mit fetch im EventListener ausführen
+  let currentPage = maxPage - maxPage + page;
+  pagination.innerHTML = currentPage + "/ " + maxPage;
+  }
+  console.log(page);
+});
