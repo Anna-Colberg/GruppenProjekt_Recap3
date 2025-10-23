@@ -2,6 +2,10 @@
 @import "components/SearchBar/SearchBar.css";
 @import "components/NavButton/NavButton.css";
 @import "components/NavPagination/NavPagination.css";
+@font-face {
+  font-family: "Get Schwifty";
+  src: url("assets/font/get_schwifty.ttf") format("truetype");
+}
 
 * {
   box-sizing: border-box;
@@ -13,20 +17,33 @@
   --color-primary: rgb(51, 51, 51);
   --color-secondary: #f6f6f6;
   --font-family: system-ui;
+  --color-font: #bfde42;
+  --color-bg: #193840;
+  --color-bg2: #f0ed8e;
 }
 
 body {
-  font-family: var(--font-family);
+  font-family: "Get Schwifty", system-ui, sans-serif;
+
   color: var(--color-primary);
   padding: 20px;
+  background-color: var(--color-secondary);
 }
 
 main {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  background-color: var(--color-bg2);
+  align-items: center;
+  padding: 2rem;
 }
 
 .title {
   padding: 10px 0;
+  color: var(--color-font);
+  background-color: var(--color-bg);
+  text-align: center;
+  padding: 20px;
+  border-radius: 0px 0px 10px 10px;
 }
