@@ -1,6 +1,10 @@
 //Task 2
 
 import { createCharacterCard } from "./components/CharacterCard/CharacterCard.js";
+import { previousButton } from "./components/NavPagination/NavPagination.js";
+/* import { nexxtButton } from "./components/NavPagination/NavPagination.js";
+ */
+
 //------
 
 const cardContainer = document.querySelector('[data-js="card-container"]');
@@ -84,3 +88,7 @@ searchBar.addEventListener("submit", (event) => {
 
   fetchCharacters();
 });
+
+
+previousButton();
+/* nexxtButton(); */
