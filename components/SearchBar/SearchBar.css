@@ -1,12 +1,21 @@
+@import url('./styles.css');
+
 .search-bar-container {
-  width: 300px;
+  width: auto;
 }
 
 .search-bar {
   padding: 10px 20px;
+  margin-bottom: 20px;
   background-color: var(--color-secondary);
   display: grid;
+  justify-content: center;
   grid-template-columns: 1fr 24px;
+  border-radius: 20px;
+}
+
+.search-bar:focus-within {
+  border: 2px solid var(--color-accent);
 }
 
 .search-bar__input {
@@ -26,4 +35,9 @@
 
 .search-bar__icon {
   width: 20px;
+}
+
+.search-bar:active,
+.search-bar:focus {
+  border-color: var(--color-accent) solid 2px;
 }

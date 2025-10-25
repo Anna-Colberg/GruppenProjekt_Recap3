@@ -1,7 +1,26 @@
+@import url('./styles.css');
+
 .button {
-  border: none;
+  border: 2px solid var(--color-font);
+  border-radius: 5px;
+  background-color: var(--color-bg);
+ 
+  
 }
 
-.button:hover {
-  background-color: var(--color-secondary);
+.button.button:hover {
+  background-color: var(--color-font);
+  color: var(--color-bg);
+}
+
+.button--active {
+  background-color: var(--color-font);
+  color: var(--color-bg);
+}
+
+.button:disabled{
+  cursor: not-allowed;
+  background-color: var(--color-bg);
+  color: var(--color-font2);
+  border-color: var(--color-font2);
 }
