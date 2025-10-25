@@ -1,13 +1,29 @@
+@import url("./styles.css");
+
 .navigation {
-  height: 30px;
-  display: grid;
-  
+  height: auto;
+  display: flex;
+  padding: 1rem 0;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
   grid-template-columns: 100px 100px 100px;
+
+  background-color: var(--color-bg);
   
 }
 
 .navigation__pagination {
-  display: grid;
+  display: flex;
   place-items: center;
   align-items: center;
+  color: var(--color-font);
 }
+
+.button {
+  padding: 0.5rem;
+  color: var(--color-font);
+  
+}
+
+
